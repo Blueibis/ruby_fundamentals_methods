@@ -9,7 +9,9 @@ her_dogs = [
   { :name => "Floorboard", :position => 22 }
 ]
 def get_absent_dogs(array)
-  array.select { |dog| dog[:position] >= 10 }
+  array.each do |dog|
+  dog if dog[:position] >= 10
+  end
 end
 def call_absent_dogs(array)
   array.each do |dog|
